@@ -1,0 +1,21 @@
+{
+  "name": "moduleDemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.1.2",
+    "nock": "^9.0.22",
+    "request": "^2.83.0"
+  }
+}
