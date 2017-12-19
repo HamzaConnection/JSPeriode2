@@ -14,11 +14,12 @@ before(function(done){
   });
 })
 after(function(done){
+  
   server.close();
   done();
 })
 
-describe("POST: /gameapi/newgame ", function () {
+describe("POST: /api/joke ", function () {
   var options = {
     url: "http://localhost:" + TEST_PORT + "/api/joke",
     method: "POST",
@@ -26,10 +27,20 @@ describe("POST: /gameapi/newgame ", function () {
     body: {joke: "Its better to be late than to arrive ugly"}
   }
 
-  it("should get a Game Object (Player-1)", function (done) {
+  it("should get a random joke", function (done) {
     request(options, function (error, res, body) {
       var addedJoke = body.joke;
       expect(addedJoke.joke).to.be.equal("Its better to be late than to arrive ugly");
+      //You should also check whether the joke actually was added to the Data-store
+      done();
+    });
+  })
+
+  it("should get all jokes", function (done) {
+    request(options, function (error, res, body) {
+      var allJokes = body.joke;
+      expect(addedJoke.joke).to.be.equal("Its better to be late than to arrive ugly");
+      //You should also check whether the joke actually was added to the Data-store
       done();
     });
   })

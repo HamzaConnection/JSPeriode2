@@ -1,0 +1,20 @@
+{
+  "name": "Mocking_HTTP_Requests_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "nock": "^9.0.22",
+    "request": "^2.83.0"
+  }
+}
