@@ -3,6 +3,7 @@ var cluster = require('cluster');
 if (cluster.isMaster) {
   // Count the machine's CPUs
   var cpuCount = require('os').cpus().length;
+  console.log('cpuCount:' + cpuCount)
 
   // Create a worker for each CPU
   for (var i = 0; i < cpuCount; i += 1) {
