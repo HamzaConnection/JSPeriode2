@@ -18,4 +18,11 @@ router.post('/joke', function(req, res, next) {
   res.json({joke: joke})
 });
 
+router.get('/joke/delete/:index', function(req, res, next) {
+  
+  let index = req.params.index
+  jokes.deleteJoke(index)
+  res.json({jokes:jokes.allJokes})
+});
+
 module.exports = router;

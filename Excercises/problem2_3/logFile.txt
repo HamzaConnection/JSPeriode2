@@ -1,3 +1,0 @@
-::1 - - [22/Sep/2017:11:52:21 +0000] "GET /index HTTP/1.1" 200 183 "http://localhost:3000/randomJoke" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36"
-::1 - - [22/Sep/2017:11:52:26 +0000] "POST /index HTTP/1.1" 302 56 "http://localhost:3000/index" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36"
-::1 - - [22/Sep/2017:11:52:26 +0000] "GET /index HTTP/1.1" 200 183 "http://localhost:3000/index" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36"

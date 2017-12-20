@@ -10,8 +10,14 @@ function _getRandomJoke(){
 function _addJoke(joke){
     jokes.push(joke);
 }
+
+function _deleteJoke(index)
+{
+    jokes.splice(index,1)
+}
 module.exports = {
     allJokes : jokes,
     getRandomJoke : _getRandomJoke,
-    addJoke : _addJoke
+    addJoke : _addJoke,
+    deleteJoke : _deleteJoke
 }
