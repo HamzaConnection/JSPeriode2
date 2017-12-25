@@ -12,12 +12,23 @@ var allJokes = require('./routes/allJokes');
 var addJoke = require('./routes/addJoke');
 var login = require('./routes/login');
 var session = require("express-session");
-//var helmet = require('helmet');
+var helmet = require('helmet');
 
+// run nsp check __________________________
  
 var app = express();
 
-//app.use(helmet())
+app.use(helmet()) // Go to chrome press inspect -> Network -> see the incoming request header etc.
+// The X-XSS-Protection HTTP header is a basic protection against XSS.
+// The Strict-Transport-Security header keeps users on HTTPS. Note it won’t tell users on HTTP to switch to HTTPS
+
+app.use(helmet.contentSecurityPolicy({ // Content-Security-Policy header can help protect against
+  // malicious injection of JavaScript, CSS, plugins, and more.
+  directives: {
+    defaultSrc: ["'self'"],
+    styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com']
+  }
+}))
 
 
 app.use(session({secret:'secret_3162735',saveUninitialized:true, resave: true}));
