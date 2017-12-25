@@ -1,5 +1,8 @@
-// find the user with id 4
-User.findByIdAndRemove(4, function(err) {
+require('./connection');
+
+var User = require('../models/users');
+
+User.findByIdAndRemove({ _id: '5a40d8c31fd2ef7840e994f0' } , function(err) {
     if (err) throw err;
   
     // we have deleted the user

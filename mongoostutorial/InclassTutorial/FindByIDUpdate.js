@@ -1,6 +1,9 @@
-// find the user with id 4
-// update username to starlord 88
-User.findByIdAndUpdate(4, { username: 'starlord88' }, function(err, user) {
+
+require('./connection');
+
+var User = require('../models/users');
+
+User.findByIdAndUpdate({ _id: '5a40e4494d89ea7ab5696115' } , { name: 'Chris' }, function(err, user) {
     if (err) throw err;
   
     // we have the updated user returned to us

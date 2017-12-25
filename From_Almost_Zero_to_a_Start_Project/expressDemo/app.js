@@ -57,12 +57,9 @@ if (app.get('env') === 'development') {
     
   });
   
-  app.post('/form', function (req, res) { // send data like this in postman ["Lars","hamza"]
-    names.push(req.body.name);
-    res.redirect('/form');
-  });
   
-  app.post('/names', function (req, res) {
+  
+  app.post('/names', function (req, res) { // send data like this in postman ["Lars","hamza"]
     names.push(req.body); //We receive it as a JavaScript object
     console.log(JSON.stringify(req.body)); 
     res.redirect('/form');

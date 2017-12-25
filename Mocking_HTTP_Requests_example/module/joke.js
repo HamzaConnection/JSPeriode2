@@ -10,5 +10,5 @@ function getJoke(callback) {
   });
 };
 module.exports = {
-  getJoke : getJoke //....
+  getJoke : getJoke 
 } 

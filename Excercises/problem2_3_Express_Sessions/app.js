@@ -12,9 +12,13 @@ var allJokes = require('./routes/allJokes');
 var addJoke = require('./routes/addJoke');
 var login = require('./routes/login');
 var session = require("express-session");
+//var helmet = require('helmet');
 
-
+ 
 var app = express();
+
+//app.use(helmet())
+
 
 app.use(session({secret:'secret_3162735',saveUninitialized:true, resave: true}));
 // SaveUninitialized : Forces a session that is "uninitialized" to be saved to the store. 

@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 // create a schema
 var userSchema = new Schema({
     name: String,
-    username: { type: String, required: true, unique: true },
+    username: { type: String, required: true, unique: true }, // required is a validator
     password: { type: String, required: true },
     admin: Boolean,
     location: String,
@@ -28,7 +28,7 @@ userSchema.methods.dudify = function() {
 };
 
 
-// on every save, add the date
+// on every save, add the date Query middleware
 userSchema.pre('save', function(next) {
     // get the current date
     var currentDate = new Date();

@@ -50,9 +50,10 @@ describe("POST: /api/joke ", function () {
 
   it("should delete a joke at the given index 4", function (done) {
     request("http://localhost:" + TEST_PORT + "/api/joke/delete/4", function (error, res, body) {
-
+      
+      
       let result = JSON.parse(body)
-      expect(result.length).to.be.equal(4); 
+      expect(result.jokes.length).to.be.equal(4); 
       // grunden til 4 er fordi de andre test tilføjer til joken så der er 5 i alt så sletter vi 1
       done();
     });

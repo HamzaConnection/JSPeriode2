@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
-var mongoURI = 'mongodb://HamzaConnection:5800-hlm@ds151014.mlab.com:51014/hamzaconnection'; 
+var mongoURI = 'mongodb://HamzaConnection:5800-hlm@ds135866.mlab.com:35866/mongoostutorial'; 
+
 // normally you wouldn't have the password to your db here but on a file that you don't commit.
 mongoose.connect(mongoURI,{useMongoClient:true});
 mongoose.Promise = global.Promise;
